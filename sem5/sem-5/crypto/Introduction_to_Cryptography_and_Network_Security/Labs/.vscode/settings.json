@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "string_view": "c",
-        "stdio.h": "c",
-        "stdlib.h": "c",
-        "time.h": "c",
-        "stdint.h": "c"
-    }
-}
