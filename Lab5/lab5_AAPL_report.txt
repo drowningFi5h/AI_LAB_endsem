@@ -1,0 +1,53 @@
+Gaussian HMM (2D features) Lab Report
+===============================
+Symbol: AAPL
+Date range: 2015-01-01 -> 2025-11-23
+Observations: 2730
+Vol window: 10 days
+
+Model selection (per K):
+ k       loglik  n_params          AIC          BIC  seed
+ 2 -5946.343622        11 11914.687245 11979.719871  2153
+ 3 -5047.116548        20 10134.233097 10252.474234  2081
+ 4 -4422.534387        31  8907.068774  9090.342537  2179
+ 5 -3984.501475        44  8057.002950  8317.133453  2209
+
+State stats (empirical returns):
+ state      mean       sd    median   n
+     0  0.001904 0.022526  0.001992 582
+     1  0.001354 0.007707  0.000601 510
+     2  0.000897 0.015638  0.001507 771
+     3 -0.001983 0.040744 -0.000874 179
+     4  0.000442 0.011717  0.000442 688
+
+Emissions (means on original scale):
+ state  mean_ret  mean_vol   sd_ret   sd_vol
+     0  0.001626  0.022520 0.022607 0.002924
+     1  0.001325  0.007382 0.007780 0.001393
+     2  0.000895  0.015653 0.015551 0.001755
+     3 -0.001500  0.039677 0.040712 0.013379
+     4  0.000542  0.011213 0.011732 0.001263
+
+Transition matrix (rows=from, cols=to):
+       0            1        2            3            4
+0.905204 4.274459e-03 0.063573 1.904839e-02 7.900902e-03
+0.007382 9.118039e-01 0.005317 2.609469e-50 7.549721e-02
+0.039903 7.442233e-03 0.872420 1.371372e-03 7.886355e-02
+0.059403 4.292004e-89 0.011363 9.292345e-01 7.766618e-76
+0.015933 5.429663e-02 0.079874 2.081708e-34 8.498960e-01
+
+Files produced:
+lab5_AAPL_decoded_states.csv
+lab5_AAPL_emissions.csv
+lab5_AAPL_model_selection.csv
+lab5_AAPL_model_selection.png
+lab5_AAPL_posterior_probs.png
+lab5_AAPL_price.png
+lab5_AAPL_prices.csv
+lab5_AAPL_report.txt
+lab5_AAPL_returns.png
+lab5_AAPL_returns_states.png
+lab5_AAPL_returns_with_vol.csv
+lab5_AAPL_state_sequence.png
+lab5_AAPL_state_stats.csv
+lab5_AAPL_transition_matrix.csv
